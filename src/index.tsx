@@ -18,3 +18,15 @@ const NotificationListener = NativeModules.NotificationListener  ? NativeModules
 export function multiply(a: number, b: number): Promise<number> {
   return NotificationListener.multiply(a, b);
 }
+
+export function sum(a: number, b: number): Promise<number> {
+  return NotificationListener.sum(a, b);
+}
+
+export function min(a: number, b: number): Promise<number> {
+  return NotificationListener.min(a, b)
+}
+
+export function fullName(name: string): Promise<string> {
+  return NotificationListener.fullName(name)
+}

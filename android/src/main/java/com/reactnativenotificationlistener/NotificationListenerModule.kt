@@ -14,7 +14,22 @@ class NotificationListenerModule(reactContext: ReactApplicationContext) : ReactC
     // See https://reactnative.dev/docs/native-modules-android
     @ReactMethod
     fun multiply(a: Int, b: Int, promise: Promise) {
-          promise.resolve(a * b)
-        }
-
+      promise.resolve(a * b)
     }
+
+    @ReactMethod
+    fun sum(a: Int, b: Int, promise: Promise) {
+      promise.resolve(a+b)
+    }
+
+    @ReactMethod
+    fun min(a: Int, b: Int, promise: Promise) {
+      promise.resolve(a-b)
+    }
+
+    @ReactMethod
+    fun fullName(name: String, promise: Promise) {
+      var nome: String = " Rosá"
+      promise.resolve(name + nome)
+    }
+}
